@@ -1,0 +1,157 @@
+{
+  "samples": [
+    {
+      "file": "healthy_01.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_02.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_03.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_04.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_05.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_06.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_07.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_08.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_09.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "healthy_10.png",
+      "expected": "healthy",
+      "true_damage_pct": 0.0
+    },
+    {
+      "file": "infected_01.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "rust_pustules",
+        "miner_trails"
+      ],
+      "true_damage_pct": 12.1
+    },
+    {
+      "file": "infected_02.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "water_soaked"
+      ],
+      "true_damage_pct": 21.4
+    },
+    {
+      "file": "infected_03.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "interveinal",
+        "rust_pustules"
+      ],
+      "true_damage_pct": 40.3
+    },
+    {
+      "file": "infected_04.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "target_rings"
+      ],
+      "true_damage_pct": 9.0
+    },
+    {
+      "file": "infected_05.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "water_soaked",
+        "powdery",
+        "target_rings"
+      ],
+      "true_damage_pct": 36.2
+    },
+    {
+      "file": "infected_06.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "rust_pustules",
+        "water_soaked",
+        "interveinal"
+      ],
+      "true_damage_pct": 41.4
+    },
+    {
+      "file": "infected_07.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "rust_pustules",
+        "fine_spots",
+        "interveinal"
+      ],
+      "true_damage_pct": 39.5
+    },
+    {
+      "file": "infected_08.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "water_soaked",
+        "rust_pustules",
+        "target_rings"
+      ],
+      "true_damage_pct": 22.6
+    },
+    {
+      "file": "infected_09.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "fine_spots",
+        "miner_trails"
+      ],
+      "true_damage_pct": 10.0
+    },
+    {
+      "file": "infected_10.png",
+      "expected": "infected",
+      "lesion_kinds": [
+        "water_soaked",
+        "powdery",
+        "rust_pustules"
+      ],
+      "true_damage_pct": 26.8
+    },
+    {
+      "file": "ood_lined_paper.png",
+      "expected": "uncertain",
+      "kind": "lined_paper"
+    },
+    {
+      "file": "ood_soil.png",
+      "expected": "uncertain",
+      "kind": "soil"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "app": "Xaverix",
+  "version": "1.0.0",
+  "target_device": "unspecified",
+  "device_is_specified": false,
+  "platform": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "python": "3.11.9",
+    "numpy": "2.4.2"
+  },
+  "iterations": 20,
+  "feature_version": "feat-v3-150",
+  "stages_ms": {
+    "decode": {
+      "p50": 0.39,
+      "p95": 0.84,
+      "mean": 0.56,
+      "min": 0.32,
+      "max": 3.66
+    },
+    "features": {
+      "p50": 10.06,
+      "p95": 12.3,
+      "mean": 10.4,
+      "min": 8.62,
+      "max": 13.2
+    },
+    "classifier": {
+      "p50": 0.14,
+      "p95": 0.21,
+      "mean": 0.15,
+      "min": 0.1,
+      "max": 0.24
+    },
+    "severity": {
+      "p50": 0.79,
+      "p95": 0.82,
+      "mean": 0.79,
+      "min": 0.77,
+      "max": 0.82
+    },
+    "knowledge": {
+      "p50": 0.0,
+      "p95": 0.07,
+      "mean": 0.07,
+      "min": 0.0,
+      "max": 1.39
+    }
+  },
+  "vision_total_p50_ms": 11.38,
+  "memory": {
+    "current_rss_mb": null,
+    "peak_rss_mb": null,
+    "note": "read from /proc/self/status; psutil is not used because it cannot build in Termux"
+  },
+  "llm": {
+    "measured": false
+  },
+  "energy": {
+    "estimated_mj_per_image": 22.8,
+    "method": "ESTIMATE ONLY: assumed 2.0 W average CPU draw times measured wall-clock latency. Not measured with a power monitor.",
+    "measured": false
+  },
+  "notes": [
+    "The vision pipeline is pure NumPy. Llama is the ExecuTorch component, hosted by ExecuServe on this device.",
+    "Latency excludes camera capture and browser rendering.",
+    "Energy is an estimate and is labelled as such."
+  ],
+  "generated_at": "2026-11-25T17:46:33"
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Xaverix — offline crop leaf advisory</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <h1 id="app-title">Xaverix</h1>
+    <p id="app-tagline" class="tagline">Offline crop leaf health check and advisory</p>
+  </div>
+  <div class="badges">
+    <span class="chip chip-offline" id="offline-badge">Offline · on-device · no cloud</span>
+    <span class="chip chip-neutral" id="llm-chip" title="Llama endpoint status">Llama: checking…</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ---------------------------------------------------------- input -->
+  <section class="card" id="input-card">
+    <h2 id="lbl-choose">Choose a leaf photo</h2>
+
+    <div class="row">
+      <label class="button primary" for="file-input" id="lbl-take">Take a photo</label>
+      <input id="file-input" type="file" accept="image/*" capture="environment" hidden>
+      <button class="button ghost" id="sample-toggle" type="button">
+        <span id="lbl-samples">or use a built-in sample</span>
+      </button>
+    </div>
+
+    <div id="sample-strip" class="sample-strip" hidden></div>
+
+    <div class="preview-wrap" id="preview-wrap" hidden>
+      <img id="preview" alt="Selected leaf">
+      <span class="preview-name" id="preview-name"></span>
+    </div>
+
+    <div class="selects">
+      <label>
+        <span id="lbl-crop">Crop</span>
+        <select id="crop"></select>
+      </label>
+      <label>
+        <span id="lbl-region">Region</span>
+        <select id="region"></select>
+      </label>
+      <label>
+        <span id="lbl-language">Language</span>
+        <select id="language"></select>
+      </label>
+    </div>
+
+    <button class="button primary wide" id="analyse" type="button" disabled>
+      <span id="lbl-analyse">Analyse</span>
+    </button>
+
+    <p class="note small" id="progress" hidden></p>
+    <p class="note small warn" id="synthetic-warning"></p>
+  </section>
+
+  <!-- --------------------------------------------------------- result -->
+  <section class="card" id="result-card" hidden>
+    <div class="verdict" id="verdict-block">
+      <span class="verdict-dot" id="verdict-dot"></span>
+      <div>
+        <h2 id="verdict-label">—</h2>
+        <p class="small muted" id="verdict-meta"></p>
+      </div>
+    </div>
+
+    <div id="severity-block" hidden>
+      <div class="meter-head">
+        <span id="lbl-severity">Leaf damage</span>
+        <strong id="severity-value"></strong>
+      </div>
+      <div class="meter"><div class="meter-fill" id="severity-fill"></div></div>
+      <p class="small muted" id="severity-detail"></p>
+    </div>
+
+    <div class="uncertain-panel" id="uncertain-panel" hidden>
+      <h3 id="lbl-why">Why Xaverix did not answer</h3>
+      <p id="uncertain-detail"></p>
+      <table class="gates" id="gate-table"></table>
+    </div>
+
+    <div class="provenance" id="provenance">
+      <span class="chip" id="source-chip"></span>
+      <p class="small muted" id="source-detail"></p>
+      <details id="guard-details" hidden>
+        <summary>Grounding guard report</summary>
+        <div id="guard-body"></div>
+      </details>
+    </div>
+
+    <div id="advisory"></div>
+
+    <div id="causes-block" hidden>
+      <h3 id="lbl-causes">Scout for these possible causes</h3>
+      <p class="small muted" id="causes-note"></p>
+      <div id="causes"></div>
+    </div>
+
+    <div id="scouting-block" hidden>
+      <h3 id="lbl-scouting">How to scout</h3>
+      <ul id="scouting"></ul>
+    </div>
+
+    <div id="region-note-block" hidden>
+      <h3 id="lbl-region-note">Note for your region</h3>
+      <p id="region-note"></p>
+    </div>
+
+    <p class="note small" id="ask-officer"></p>
+
+    <details id="trace-details">
+      <summary id="lbl-trace">Pipeline trace</summary>
+      <table class="trace" id="trace-table"></table>
+    </details>
+  </section>
+
+  <!-- ----------------------------------------------------- transparency -->
+  <section class="card" id="proof-card">
+    <h2>Verify it yourself</h2>
+    <div class="row">
+      <button class="button ghost" id="btn-offline" type="button">Prove it is offline</button>
+      <button class="button ghost" id="btn-guard" type="button">Test the grounding guard</button>
+    </div>
+    <pre id="proof-output" hidden></pre>
+    <ul class="disclosures" id="disclosures"></ul>
+  </section>
+
+</main>
+
+<footer>
+  <p class="small muted">
+    Xaverix · Bharat AI-SoC PS1 · vision in NumPy, advisory by Llama 3.2 1B through
+    ExecuTorch on this device. <span id="footer-version"></span>
+  </p>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

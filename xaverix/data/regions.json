@@ -1,0 +1,50 @@
+{
+  "note": "Regions offered in the UI. 'key' selects the region_notes entry in the knowledge base; 'states' lists state names the grounding guard treats as belonging to this region, so naming a different state is flagged.",
+  "default_region": "tamil_nadu",
+  "regions": [
+    {
+      "key": "tamil_nadu",
+      "label_en": "Tamil Nadu",
+      "label_hi": "तमिलनाडु",
+      "label_ta": "தமிழ்நாடு",
+      "states": ["tamil nadu", "tamilnadu", "puducherry"]
+    },
+    {
+      "key": "punjab",
+      "label_en": "Punjab",
+      "label_hi": "पंजाब",
+      "label_ta": "பஞ்சாப்",
+      "states": ["punjab", "haryana", "chandigarh"]
+    },
+    {
+      "key": "maharashtra",
+      "label_en": "Maharashtra",
+      "label_hi": "महाराष्ट्र",
+      "label_ta": "மகாராஷ்டிரா",
+      "states": ["maharashtra", "goa"]
+    },
+    {
+      "key": "default",
+      "label_en": "Other / not sure",
+      "label_hi": "अन्य / पता नहीं",
+      "label_ta": "மற்றவை / தெரியவில்லை",
+      "states": []
+    }
+  ],
+  "all_indian_states": [
+    "andhra pradesh", "arunachal pradesh", "assam", "bihar", "chhattisgarh",
+    "goa", "gujarat", "haryana", "himachal pradesh", "jharkhand", "karnataka",
+    "kerala", "madhya pradesh", "maharashtra", "manipur", "meghalaya",
+    "mizoram", "nagaland", "odisha", "punjab", "rajasthan", "sikkim",
+    "tamil nadu", "tamilnadu", "telangana", "tripura", "uttar pradesh",
+    "uttarakhand", "west bengal", "delhi", "puducherry", "chandigarh",
+    "jammu", "kashmir", "ladakh"
+  ],
+  "crops": [
+    {"key": "tomato", "label_en": "Tomato", "label_hi": "टमाटर", "label_ta": "தக்காளி"},
+    {"key": "potato", "label_en": "Potato", "label_hi": "आलू", "label_ta": "உருளைக்கிழங்கு"},
+    {"key": "chilli", "label_en": "Chilli", "label_hi": "मिर्च", "label_ta": "மிளகாய்"},
+    {"key": "brinjal", "label_en": "Brinjal", "label_hi": "बैंगन", "label_ta": "கத்தரிக்காய்"},
+    {"key": "other", "label_en": "Other leafy crop", "label_hi": "अन्य पत्तेदार फसल", "label_ta": "பிற இலைப் பயிர்"}
+  ]
+}

@@ -1,0 +1,20 @@
+# Runtime dependencies.
+#
+# Deliberately minimal: the application runs in Termux on an Arm Android
+# device, where these install as system packages:
+#
+#     pkg install python python-numpy python-pillow
+#
+# Everything else is the Python standard library -- http.server for the web
+# interface, urllib.request for the model client, unittest for the tests, and
+# /proc/self/status for memory statistics.
+#
+# Not used, and not to be added: psutil (requires a compiler, fails in
+# Termux), Flask, requests, scikit-learn, OpenCV, torch.
+#
+# ExecuTorch is not listed because it is not a dependency of this process. It
+# runs inside the ExecuServe Android application, which hosts the language
+# model and is reached over loopback.
+
+numpy>=1.21
+Pillow>=9.0

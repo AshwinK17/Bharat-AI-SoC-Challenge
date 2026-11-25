@@ -1,0 +1,52 @@
+{
+  "note": "Agro-input names the grounding guard watches for. If a Llama output names any of these and the name is not present in the matched knowledge-base entry, the output is rejected. The suffix regex in guard.py catches invented-but-plausible names that are not on this list.",
+  "fungicides": [
+    "mancozeb", "copper oxychloride", "bordeaux mixture", "copper hydroxide",
+    "wettable sulphur", "sulphur", "chlorothalonil", "captan", "carbendazim",
+    "thiophanate methyl", "metalaxyl", "cymoxanil", "cymoxanil mancozeb",
+    "azoxystrobin", "pyraclostrobin", "kresoxim methyl", "trifloxystrobin",
+    "difenoconazole", "propiconazole", "hexaconazole", "tebuconazole",
+    "myclobutanil", "triadimefon", "fosetyl aluminium", "dimethomorph",
+    "fenamidone", "iprovalicarb", "famoxadone", "zineb", "ziram", "thiram",
+    "propineb", "validamycin", "tricyclazole", "isoprothiolane", "edifenphos",
+    "kasugamycin", "streptomycin", "streptocycline", "oxytetracycline"
+  ],
+  "insecticides": [
+    "imidacloprid", "thiamethoxam", "acetamiprid", "clothianidin",
+    "dinotefuran", "chlorpyrifos", "quinalphos", "dimethoate", "monocrotophos",
+    "phosphamidon", "malathion", "fenitrothion", "fenthion", "profenofos",
+    "triazophos", "acephate", "carbaryl", "carbofuran", "carbosulfan",
+    "thiodicarb", "methomyl", "cypermethrin", "deltamethrin", "fenvalerate",
+    "lambda cyhalothrin", "permethrin", "bifenthrin", "fipronil",
+    "chlorantraniliprole", "flubendiamide", "emamectin benzoate",
+    "abamectin", "spinosad", "spinetoram", "indoxacarb", "novaluron",
+    "diafenthiuron", "buprofezin", "pyriproxyfen", "diflubenzuron",
+    "ethion", "endosulfan", "dichlorvos", "oxydemeton methyl"
+  ],
+  "acaricides": [
+    "dicofol", "propargite", "fenazaquin", "spiromesifen", "abamectin",
+    "hexythiazox", "etoxazole", "milbemectin"
+  ],
+  "herbicides": [
+    "glyphosate", "paraquat", "atrazine", "pendimethalin", "pretilachlor",
+    "butachlor", "oxyfluorfen", "2,4-d", "metribuzin", "imazethapyr",
+    "sulfosulfuron", "bispyribac sodium", "clodinafop", "fenoxaprop"
+  ],
+  "biologicals_and_organics": [
+    "neem oil", "neem seed kernel extract", "azadirachtin", "neem cake",
+    "trichoderma viride", "trichoderma harzianum", "pseudomonas fluorescens",
+    "bacillus subtilis", "bacillus thuringiensis", "beauveria bassiana",
+    "metarhizium anisopliae", "verticillium lecanii", "paecilomyces",
+    "cow milk spray", "cow urine", "panchagavya", "jeevamrutha",
+    "buttermilk spray", "garlic chilli extract", "sticky trap",
+    "yellow sticky trap", "pheromone trap", "light trap"
+  ],
+  "nutrients": [
+    "urea", "dap", "diammonium phosphate", "muriate of potash", "potash",
+    "ssp", "single super phosphate", "farmyard manure", "vermicompost",
+    "compost", "zinc sulphate", "ferrous sulphate", "magnesium sulphate",
+    "borax", "boron", "calcium nitrate", "potassium nitrate",
+    "micronutrient mixture", "sulphate of potash", "ammonium sulphate",
+    "npk", "19:19:19", "13:0:45"
+  ]
+}

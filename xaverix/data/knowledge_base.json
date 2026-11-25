@@ -1,0 +1,306 @@
+{
+  "kb_version": "1.0",
+  "scope_note": "Prototype knowledge base for a binary leaf-health verdict. The infected entry lists probable causes to scout for; it does not assert a single diagnosis, because the vision model is a binary healthy/infected detector trained on procedurally generated imagery.",
+  "entries": {
+    "healthy": {
+      "id": "healthy",
+      "verdict": "healthy",
+      "name_en": "No disease signs detected",
+      "headline_en": "This leaf looks healthy",
+      "what_is_happening_en": "The leaf shows an even green colour with no necrotic spots, no yellowing between the veins and no feeding damage. No treatment is needed today.",
+      "pathogen": null,
+      "pathogen_type": null,
+      "symptoms": [
+        "even green colour across the leaf blade",
+        "no brown or black spots",
+        "no yellowing between the veins",
+        "no holes, trails or chewed edges"
+      ],
+      "conditions": [],
+      "probable_causes": [],
+      "organic_treatment": [
+        {
+          "input": "neem oil",
+          "dose": "3 ml per litre of water",
+          "interval": "once every 15 days as a preventive spray",
+          "note": "spray in the evening so the leaf does not scorch"
+        }
+      ],
+      "chemical_treatment": [],
+      "prevention": [
+        "scout 10 plants in each corner of the field once a week",
+        "water at the base with drip or a hose instead of overhead spraying",
+        "remove and burn crop residue after harvest",
+        "keep 45 to 60 cm between plants so air moves freely",
+        "rotate to a non-host crop for two to three seasons"
+      ],
+      "urgency": {
+        "trace": "No action needed. Keep scouting once a week.",
+        "mild": "No action needed. Keep scouting once a week.",
+        "moderate": "No action needed. Keep scouting once a week.",
+        "severe": "No action needed. Keep scouting once a week."
+      },
+      "scouting": [
+        "check the lower older leaves first, because most leaf diseases start there",
+        "turn leaves over and look at the underside for insects"
+      ],
+      "region_notes": {
+        "default": "Scout more often during humid weather and after continuous rain.",
+        "tamil_nadu": "During the north-east monsoon from October to December, scout twice a week because long leaf wetness favours leaf disease.",
+        "punjab": "Scout closely during February and March as temperature and humidity rise.",
+        "maharashtra": "Scout twice a week in the kharif season when humidity stays high."
+      },
+      "sources": [
+        "ICAR Indian Institute of Horticultural Research, integrated disease management advisories",
+        "Tamil Nadu Agricultural University Crop Protection Guide"
+      ]
+    },
+    "infected": {
+      "id": "infected",
+      "verdict": "infected",
+      "name_en": "Disease or pest damage detected",
+      "headline_en": "This leaf shows disease or pest damage",
+      "what_is_happening_en": "The leaf shows dead or discoloured tissue. Part of the leaf can no longer feed the plant. Act early, because leaf damage spreads to healthy leaves in warm and humid weather.",
+      "pathogen": null,
+      "pathogen_type": null,
+      "symptoms": [
+        "brown or black dead patches on the leaf blade",
+        "yellowing of tissue around the damaged area",
+        "grey or water-soaked patches, often starting at the leaf margin",
+        "small dark spots spread across the blade",
+        "holes, winding trails or chewed edges where an insect has fed"
+      ],
+      "conditions": [
+        "warm weather between 20 and 30 degrees Celsius",
+        "high humidity or leaves that stay wet for more than six hours",
+        "dense planting with poor air movement",
+        "overhead irrigation that splashes soil onto the lower leaves"
+      ],
+      "probable_causes": [
+        {
+          "name": "early blight",
+          "pathogen": "Alternaria solani",
+          "pathogen_type": "fungus",
+          "distinguishing_symptom": "dark brown spots with concentric rings, like a target, on the older lower leaves, each with a yellow halo",
+          "organic": {
+            "input": "neem oil",
+            "dose": "5 ml per litre of water",
+            "interval": "every 7 days",
+            "note": "spray in the evening and cover the underside of the leaf"
+          },
+          "chemical": {
+            "input": "mancozeb 75 WP",
+            "dose": "2 g per litre of water",
+            "interval": "every 10 days, maximum 3 sprays",
+            "phi_days": 7
+          }
+        },
+        {
+          "name": "late blight",
+          "pathogen": "Phytophthora infestans",
+          "pathogen_type": "oomycete",
+          "distinguishing_symptom": "large grey-green water-soaked patches starting at the leaf margin, with a pale ring and sometimes white growth on the underside in damp weather",
+          "organic": {
+            "input": "Bordeaux mixture",
+            "dose": "1 percent solution",
+            "interval": "every 10 days in damp weather",
+            "note": "mix fresh and use the same day"
+          },
+          "chemical": {
+            "input": "copper oxychloride 50 WP",
+            "dose": "3 g per litre of water",
+            "interval": "every 10 days, maximum 3 sprays",
+            "phi_days": 7
+          }
+        },
+        {
+          "name": "bacterial leaf spot",
+          "pathogen": "Xanthomonas campestris",
+          "pathogen_type": "bacterium",
+          "distinguishing_symptom": "many small dark spots with a narrow yellow halo, which later dry and tear, giving the leaf a ragged look",
+          "organic": {
+            "input": "Pseudomonas fluorescens",
+            "dose": "10 g per litre of water",
+            "interval": "every 10 days",
+            "note": "do not mix with a chemical fungicide in the same tank"
+          },
+          "chemical": {
+            "input": "copper oxychloride 50 WP",
+            "dose": "3 g per litre of water",
+            "interval": "every 10 days, maximum 3 sprays",
+            "phi_days": 7
+          }
+        },
+        {
+          "name": "powdery mildew",
+          "pathogen": "Erysiphe cichoracearum",
+          "pathogen_type": "fungus",
+          "distinguishing_symptom": "white powdery patches on the upper leaf surface that rub off between the fingers",
+          "organic": {
+            "input": "cow milk spray",
+            "dose": "100 ml per litre of water",
+            "interval": "every 7 days",
+            "note": "spray in the morning sun"
+          },
+          "chemical": {
+            "input": "wettable sulphur 80 WP",
+            "dose": "2 g per litre of water",
+            "interval": "every 10 days, maximum 3 sprays",
+            "phi_days": 7
+          }
+        },
+        {
+          "name": "sucking pest damage",
+          "pathogen": "Bemisia tabaci and Aphis gossypii",
+          "pathogen_type": "insect",
+          "distinguishing_symptom": "yellow stipple mottling, curled leaves, sticky honeydew and sooty black mould, with small insects clustered on the leaf underside",
+          "organic": {
+            "input": "neem seed kernel extract",
+            "dose": "50 g per litre of water",
+            "interval": "every 7 days",
+            "note": "add a yellow sticky trap for every 10 plants"
+          },
+          "chemical": {
+            "input": "imidacloprid 17.8 SL",
+            "dose": "0.3 ml per litre of water",
+            "interval": "one spray, repeat only after 15 days",
+            "phi_days": 5
+          }
+        },
+        {
+          "name": "leaf miner damage",
+          "pathogen": "Liriomyza trifolii",
+          "pathogen_type": "insect",
+          "distinguishing_symptom": "pale winding trails inside the leaf, like a serpent line drawn under the surface",
+          "organic": {
+            "input": "neem oil",
+            "dose": "5 ml per litre of water",
+            "interval": "every 7 days",
+            "note": "pick and destroy the mined leaves first"
+          },
+          "chemical": {
+            "input": "spinosad 45 SC",
+            "dose": "0.3 ml per litre of water",
+            "interval": "one spray, repeat only after 15 days",
+            "phi_days": 5
+          }
+        },
+        {
+          "name": "nutrient deficiency",
+          "pathogen": null,
+          "pathogen_type": "abiotic",
+          "distinguishing_symptom": "even yellowing between green veins with no spots and no insects, usually on the older leaves first",
+          "organic": {
+            "input": "well rotted farmyard manure",
+            "dose": "2 kg per plant",
+            "interval": "once, worked into the soil",
+            "note": "water immediately after applying"
+          },
+          "chemical": {
+            "input": "urea",
+            "dose": "5 g per litre of water as a foliar spray",
+            "interval": "every 15 days, maximum 2 sprays",
+            "phi_days": 0
+          }
+        }
+      ],
+      "organic_treatment": [
+        {
+          "input": "neem oil",
+          "dose": "5 ml per litre of water",
+          "interval": "every 7 days",
+          "note": "spray in the evening and wet both sides of the leaf"
+        },
+        {
+          "input": "Trichoderma viride",
+          "dose": "5 g per litre of water",
+          "interval": "as a soil drench every 15 days",
+          "note": "use on the soil, not on the leaf"
+        }
+      ],
+      "chemical_treatment": [
+        {
+          "input": "mancozeb 75 WP",
+          "dose": "2 g per litre of water",
+          "interval": "every 10 days, maximum 3 sprays",
+          "phi_days": 7,
+          "note": "use only after confirming a fungal cause by the symptoms above"
+        },
+        {
+          "input": "copper oxychloride 50 WP",
+          "dose": "3 g per litre of water",
+          "interval": "every 10 days, maximum 3 sprays",
+          "phi_days": 7,
+          "note": "works on both bacterial spot and late blight"
+        }
+      ],
+      "prevention": [
+        "remove and burn the affected lower leaves, do not leave them in the field",
+        "switch from overhead watering to drip or basin watering so leaves stay dry",
+        "mulch the soil to stop rain splashing soil onto the lower leaves",
+        "stake the plants and keep 45 to 60 cm spacing so air moves freely",
+        "rotate to a non-host crop for two to three seasons",
+        "wash hands and tools after handling affected plants"
+      ],
+      "urgency": {
+        "trace": "Damage is only just starting. Remove the affected leaves today and scout again in 3 days. A spray is usually not needed yet.",
+        "mild": "Remove the affected leaves today, then spray the organic option within 2 days. Scout again after 7 days.",
+        "moderate": "Act within 24 hours. Remove the affected leaves, spray, and check the neighbouring plants, because the damage is spreading.",
+        "severe": "Act today. More than half the leaf is lost. Remove the badly affected leaves, spray, and ask your local agriculture extension officer to visit, because the whole plot is at risk."
+      },
+      "scouting": [
+        "check 10 plants in each corner of the field and 10 in the middle",
+        "look at the older lower leaves first, where most leaf disease starts",
+        "turn the leaves over and look for insects and their eggs on the underside",
+        "match what you see against the probable causes listed above before choosing a spray"
+      ],
+      "region_notes": {
+        "default": "Spray only in calm weather and never within the pre-harvest interval shown for the product.",
+        "tamil_nadu": "During the north-east monsoon from October to December, long leaf wetness favours blight. Shorten the spray interval to 7 days and drain standing water from the field.",
+        "punjab": "Blight pressure rises in February and March. Avoid evening irrigation so leaves are dry overnight.",
+        "maharashtra": "In the kharif season, high humidity favours blight. Improve drainage and keep the field free of weeds."
+      },
+      "sources": [
+        "ICAR Indian Institute of Horticultural Research, integrated disease management advisories",
+        "Tamil Nadu Agricultural University Crop Protection Guide",
+        "Central Insecticides Board and Registration Committee approved label claims"
+      ]
+    },
+    "uncertain": {
+      "id": "uncertain",
+      "verdict": "uncertain",
+      "name_en": "Cannot assess this image reliably",
+      "headline_en": "This image cannot be assessed reliably",
+      "what_is_happening_en": "Xaverix could not find a single clear leaf filling the frame, or the image sits outside the range this prototype was trained on. No verdict is given, because a wrong verdict would be worse than none.",
+      "pathogen": null,
+      "pathogen_type": null,
+      "symptoms": [],
+      "conditions": [],
+      "probable_causes": [],
+      "organic_treatment": [],
+      "chemical_treatment": [],
+      "prevention": [
+        "hold the camera 20 to 30 cm from one leaf so the leaf fills most of the frame",
+        "photograph in daylight but not in direct glare, and avoid your own shadow",
+        "place the leaf against a plain background such as bare soil or a plain cloth",
+        "keep the camera steady and take the photo again if it looks blurred"
+      ],
+      "urgency": {
+        "trace": "Retake the photograph following the guidance above.",
+        "mild": "Retake the photograph following the guidance above.",
+        "moderate": "Retake the photograph following the guidance above.",
+        "severe": "Retake the photograph following the guidance above."
+      },
+      "scouting": [
+        "if the leaf clearly looks damaged to your eye, trust your eye and ask your local agriculture extension officer"
+      ],
+      "region_notes": {
+        "default": "This prototype abstains rather than guess. Ask your local agriculture extension officer if you are unsure.",
+        "tamil_nadu": "This prototype abstains rather than guess. Ask your local agriculture extension officer if you are unsure.",
+        "punjab": "This prototype abstains rather than guess. Ask your local agriculture extension officer if you are unsure.",
+        "maharashtra": "This prototype abstains rather than guess. Ask your local agriculture extension officer if you are unsure."
+      },
+      "sources": []
+    }
+  }
+}
